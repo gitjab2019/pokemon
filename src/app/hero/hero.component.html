@@ -1,0 +1,18 @@
+<p>hero works!</p>
+<div>
+  <form>
+    Pokemon Id:
+    <input
+      type="number"
+      placeholder="Pokemon Id"
+      [(ngModel)]="this.pokeId"
+      name="number"
+    />
+    <button (click)="getPokemonFromApiToFront()">Submit</button>
+    <button>Delete</button>
+  </form>
+  <app-pokemon-detail
+    *ngIf="pokemon"
+    [pokePadre]="pokemon"
+  ></app-pokemon-detail>
+</div>

@@ -1,0 +1,21 @@
+<button class="btn btn-success" (click)="getMorePokemonsFromApi()">
+  Add + Pokes!
+</button>
+<div *ngIf="pokemons" class="pokemon-grid">
+  <div class="item" *ngFor="let pok of pokemons; let i = index">
+    <app-pokemon-detail [pokePadre]="pok"></app-pokemon-detail>
+    <button (click)="editPokemonOn(i)">Edit</button>
+    <button (click)="deletePoke(i)">Delete</button>
+    <div *ngIf="this.editingPokemon[i]">
+      <form (ngSubmit)="editPokemonOff()">
+        <input
+          type="text"
+          name="newName"
+          id="newName"
+          [(ngModel)]="pokemons[this.currentPokemon].name"
+        />
+        <button type="submit">Update</button>
+      </form>
+    </div>
+  </div>
+</div>

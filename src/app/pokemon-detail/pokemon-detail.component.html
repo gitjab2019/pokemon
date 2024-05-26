@@ -1,0 +1,9 @@
+<div class="pokemon" *ngIf="pokePadre">
+  <div class="name">{{ pokePadre.name }}</div>
+  <div class="img">
+    <img
+      [src]="this.pokePadre.sprite"
+      alt="Imagen de {{ this.pokePadre.name }}"
+    />
+  </div>
+</div>

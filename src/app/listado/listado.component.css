@@ -1,0 +1,9 @@
+.pokemon-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas de igual tamaño */
+    grid-gap: 10px; /* Espacio entre los elementos de la grilla */
+    padding-left: 2rem;
+    padding-bottom: 6rem;
+  }
+
+  
